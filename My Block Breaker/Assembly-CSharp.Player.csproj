@@ -53,19 +53,19 @@
     <UnityVersion>2021.3.5f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Epic Toon FX\Epic Toon FX\Demo\ParticleEffectsShowcase\Scripts\ParticleEffectsLibrary.cs" />
-    <Compile Include="Assets\Epic Toon FX\Epic Toon FX\Demo\Scripts\ETFXLoopScript.cs" />
     <Compile Include="Assets\Epic Toon FX\Epic Toon FX\Scripts\ETFXPitchRandomizer.cs" />
-    <Compile Include="Assets\Epic Toon FX\Epic Toon FX\Scripts\ETFXLightFade.cs" />
-    <Compile Include="Assets\Epic Toon FX\Epic Toon FX\Demo\Scripts\ETFXButtonScript.cs" />
     <Compile Include="Assets\Epic Toon FX\Epic Toon FX\Demo\Scripts\ETFXFireProjectile.cs" />
+    <Compile Include="Assets\Epic Toon FX\Epic Toon FX\Demo\Scripts\ETFXButtonScript.cs" />
+    <Compile Include="Assets\Epic Toon FX\Epic Toon FX\Scripts\ETFXLightFade.cs" />
+    <Compile Include="Assets\Epic Toon FX\Epic Toon FX\Demo\ParticleEffectsShowcase\Scripts\ParticleEffectsLibrary.cs" />
     <Compile Include="Assets\Epic Toon FX\Epic Toon FX\Demo\Scripts\ETFXMouseOrbit.cs" />
-    <Compile Include="Assets\Epic Toon FX\Epic Toon FX\Demo\ParticleEffectsShowcase\Scripts\PEButtonScript.cs" />
-    <Compile Include="Assets\Epic Toon FX\Epic Toon FX\Demo\Scripts\ETFXProjectileScript.cs" />
     <Compile Include="Assets\Epic Toon FX\Epic Toon FX\Scripts\ETFXRotation.cs" />
     <Compile Include="Assets\Epic Toon FX\Epic Toon FX\Demo\Scripts\ETFXSceneManager.cs" />
-    <Compile Include="Assets\Epic Toon FX\Epic Toon FX\Demo\ParticleEffectsShowcase\Scripts\PEDestoryTimed.cs" />
+    <Compile Include="Assets\Epic Toon FX\Epic Toon FX\Demo\ParticleEffectsShowcase\Scripts\PEButtonScript.cs" />
+    <Compile Include="Assets\Epic Toon FX\Epic Toon FX\Demo\Scripts\ETFXLoopScript.cs" />
     <Compile Include="Assets\Epic Toon FX\Epic Toon FX\Demo\ParticleEffectsShowcase\Scripts\UICanvasManager.cs" />
+    <Compile Include="Assets\Epic Toon FX\Epic Toon FX\Demo\ParticleEffectsShowcase\Scripts\PEDestoryTimed.cs" />
+    <Compile Include="Assets\Epic Toon FX\Epic Toon FX\Demo\Scripts\ETFXProjectileScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Toony Colors Pro\Shaders\Legacy\Variants\TCP2_Desktop_Rim_OutlineBlending.shader" />
@@ -174,6 +174,7 @@
     <None Include="Assets\Toony Colors Pro\Shaders\Legacy\Variants\TCP2_Mobile_Matcap_Outline.shader" />
     <None Include="Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_Sketch.txt" />
     <None Include="Assets\Toony Colors Pro\Shaders\Include\TCP2_Outline_SM2.shader" />
+    <None Include="Assets\BOXOPHOBIC\Polyverse Skies\Core\Shaders\Simple.shader" />
     <None Include="Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_Aura2.txt" />
     <None Include="Assets\Toony Colors Pro\Shaders Generated\Examples\Water\Reflection.shader" />
     <None Include="Assets\Toony Colors Pro\Shaders Generated\Examples\Water\Lava.shader" />
@@ -198,6 +199,7 @@
     <None Include="Assets\Toony Colors Pro\Shaders\Legacy\Variants\TCP2_Desktop_Specular_Rim_OutlineBlending.shader" />
     <None Include="Assets\Toony Colors Pro\Shaders Generated\Examples\PBS\Outline Behind.shader" />
     <None Include="Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_HSV.txt" />
+    <None Include="Assets\BOXOPHOBIC\Polyverse Skies\Generator\Shaders\Rendering Clouds.shader" />
     <None Include="Assets\Toony Colors Pro\Shaders\Hybrid\TCP2 Hybrid URP Support.cginc" />
     <None Include="Assets\Toony Colors Pro\Shaders PBS\TCP2_Standard PBS (Specular).shader" />
     <None Include="Assets\Toony Colors Pro\Shaders\Legacy\Variants\TCP2_Desktop_Rim.shader" />
@@ -227,6 +229,7 @@
     <None Include="Assets\Toony Colors Pro\Shaders\Legacy\Variants\TCP2_Desktop_Specular_RimOutline_OutlineBlending.shader" />
     <None Include="Assets\Toony Colors Pro\Shader Templates\TCP2_ShaderTemplate_Default.txt" />
     <None Include="Assets\Toony Colors Pro\Shaders Generated\Examples\Water\Poison.shader" />
+    <None Include="Assets\BOXOPHOBIC\Polyverse Skies\Core\Shaders\Standard.shader" />
     <None Include="Assets\Toony Colors Pro\Shaders\Hybrid\TCP2 Hybrid Shader.shader" />
     <None Include="Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_Specular.txt" />
     <None Include="Assets\Toony Colors Pro\Shaders Generated\Examples\SG2\Detail Texture.shader" />
@@ -436,14 +439,14 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\AOT\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
-    </Reference>
     <Reference Include="DemiLib">
       <HintPath>Assets\Plugins\Demigiant\DemiLib\Core\DemiLib.dll</HintPath>
     </Reference>
     <Reference Include="DOTween">
       <HintPath>Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="DOTweenPro">
       <HintPath>Assets\Plugins\Demigiant\DOTweenPro\DOTweenPro.dll</HintPath>
@@ -855,6 +858,18 @@
     <ProjectReference Include="ToonyColorsPro2.Demo.Player.csproj">
       <Project>{B0421BDB-EAB7-C904-0ADF-0D7DC9E60C6C}</Project>
       <Name>ToonyColorsPro2.Demo.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Boxophobic.PolyverseSkies.Scripts.Player.csproj">
+      <Project>{73A12B09-BBFB-15AB-8599-EF961A5345AC}</Project>
+      <Name>Boxophobic.PolyverseSkies.Scripts.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Boxophobic.PolyverseSkies.Runtime.Player.csproj">
+      <Project>{99961FF9-9508-DE0F-F02C-EE784BC51392}</Project>
+      <Name>Boxophobic.PolyverseSkies.Runtime.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Boxophobic.Utils.Scripts.Player.csproj">
+      <Project>{61FD742F-8F0D-0505-D6F1-A5E04334F6A7}</Project>
+      <Name>Boxophobic.Utils.Scripts.Player</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
