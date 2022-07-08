@@ -913,11 +913,11 @@
     <Reference Include="Unity.Services.Core">
       <HintPath>Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Core">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.EditorCoroutines.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Core">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Services.Core.Analytics">
       <HintPath>Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
@@ -943,34 +943,6 @@
       <Project>{4737D156-D006-D19B-7C2F-A3D907A57FEB}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{4D226505-6F6A-7F1C-0C9E-E0CB178821C1}</Project>
-      <Name>UnityEditor.UI</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{68B58101-E572-34C6-5874-829E4C5A0A1B}</Project>
-      <Name>UnityEngine.UI</Name>
-    </ProjectReference>
-    <ProjectReference Include="ToonyColorsPro.Runtime.csproj">
-      <Project>{A01F29B5-E659-31BB-9538-64DD5416F140}</Project>
-      <Name>ToonyColorsPro.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="ToonyColorsPro.Editor.csproj">
-      <Project>{F59C1363-FB42-7D6A-9431-22D283285923}</Project>
-      <Name>ToonyColorsPro.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="ToonyColorsPro2.Demo.csproj">
-      <Project>{1B21CA9E-EC48-426B-69B7-72B1D6063E9F}</Project>
-      <Name>ToonyColorsPro2.Demo</Name>
-    </ProjectReference>
-    <ProjectReference Include="Boxophobic.PolyverseSkies.Editor.csproj">
-      <Project>{322D020D-F905-E102-5D51-92DA439A9924}</Project>
-      <Name>Boxophobic.PolyverseSkies.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Boxophobic.PolyverseSkies.Scripts.csproj">
-      <Project>{7CC2B2D8-9724-9CA5-0450-C4ECEAE07E55}</Project>
-      <Name>Boxophobic.PolyverseSkies.Scripts</Name>
-    </ProjectReference>
     <ProjectReference Include="Boxophobic.PolyverseSkies.Runtime.csproj">
       <Project>{C066EB5B-642B-22ED-A41B-1804F9E3D46C}</Project>
       <Name>Boxophobic.PolyverseSkies.Runtime</Name>
@@ -979,9 +951,37 @@
       <Project>{06CBE9DF-C58A-1088-0302-058F926D43E2}</Project>
       <Name>Boxophobic.Utils.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="UnityEditor.UI.csproj">
+      <Project>{4D226505-6F6A-7F1C-0C9E-E0CB178821C1}</Project>
+      <Name>UnityEditor.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Boxophobic.PolyverseSkies.Editor.csproj">
+      <Project>{322D020D-F905-E102-5D51-92DA439A9924}</Project>
+      <Name>Boxophobic.PolyverseSkies.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.UI.csproj">
+      <Project>{68B58101-E572-34C6-5874-829E4C5A0A1B}</Project>
+      <Name>UnityEngine.UI</Name>
+    </ProjectReference>
     <ProjectReference Include="Boxophobic.Utils.Scripts.csproj">
       <Project>{0C337250-5870-DD0C-ED3C-28AAA7FC2DB4}</Project>
       <Name>Boxophobic.Utils.Scripts</Name>
+    </ProjectReference>
+    <ProjectReference Include="ToonyColorsPro.Runtime.csproj">
+      <Project>{A01F29B5-E659-31BB-9538-64DD5416F140}</Project>
+      <Name>ToonyColorsPro.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Boxophobic.PolyverseSkies.Scripts.csproj">
+      <Project>{7CC2B2D8-9724-9CA5-0450-C4ECEAE07E55}</Project>
+      <Name>Boxophobic.PolyverseSkies.Scripts</Name>
+    </ProjectReference>
+    <ProjectReference Include="ToonyColorsPro.Editor.csproj">
+      <Project>{F59C1363-FB42-7D6A-9431-22D283285923}</Project>
+      <Name>ToonyColorsPro.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="ToonyColorsPro2.Demo.csproj">
+      <Project>{1B21CA9E-EC48-426B-69B7-72B1D6063E9F}</Project>
+      <Name>ToonyColorsPro2.Demo</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

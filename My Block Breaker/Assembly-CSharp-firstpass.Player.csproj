@@ -684,13 +684,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Boxophobic.PolyverseSkies.Runtime.Player.csproj">
+      <Project>{99961FF9-9508-DE0F-F02C-EE784BC51392}</Project>
+      <Name>Boxophobic.PolyverseSkies.Runtime.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.Player.csproj">
       <Project>{4429D816-8797-7D2B-D20B-6AD690AF53B2}</Project>
       <Name>UnityEngine.UI.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="Boxophobic.Utils.Scripts.Player.csproj">
+      <Project>{61FD742F-8F0D-0505-D6F1-A5E04334F6A7}</Project>
+      <Name>Boxophobic.Utils.Scripts.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="ToonyColorsPro.Runtime.Player.csproj">
       <Project>{24ED81FF-D913-FD29-2869-6547D4A9A120}</Project>
       <Name>ToonyColorsPro.Runtime.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Boxophobic.PolyverseSkies.Scripts.Player.csproj">
+      <Project>{73A12B09-BBFB-15AB-8599-EF961A5345AC}</Project>
+      <Name>Boxophobic.PolyverseSkies.Scripts.Player</Name>
     </ProjectReference>
     <ProjectReference Include="ToonyColorsPro2.Demo.Player.csproj">
       <Project>{B0421BDB-EAB7-C904-0ADF-0D7DC9E60C6C}</Project>
