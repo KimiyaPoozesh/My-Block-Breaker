@@ -1,0 +1,22 @@
+[Ll] ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds
+Assests/AssetStoreTools*
+
+# Visual Studio 2015 cache directory
+EportedObj/
+.consulo/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+
+# Unity3D generated File On Creash Reports
+sysinfo.txt
+# Builds
+*.apk
+*.unitypackage

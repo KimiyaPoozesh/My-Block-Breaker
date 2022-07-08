@@ -66,6 +66,7 @@
     <Compile Include="Assets\Epic Toon FX\Epic Toon FX\Demo\ParticleEffectsShowcase\Scripts\UICanvasManager.cs" />
     <Compile Include="Assets\Epic Toon FX\Epic Toon FX\Demo\ParticleEffectsShowcase\Scripts\PEDestoryTimed.cs" />
     <Compile Include="Assets\Epic Toon FX\Epic Toon FX\Demo\Scripts\ETFXProjectileScript.cs" />
+    <Compile Include="Assets\CODE\Padle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Toony Colors Pro\Shaders\Legacy\Variants\TCP2_Desktop_Rim_OutlineBlending.shader" />
