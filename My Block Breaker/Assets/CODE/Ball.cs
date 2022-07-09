@@ -21,4 +21,11 @@ public class Ball : MonoBehaviour
 
     
   }
+      public void OnCollisionEnter(Collision collision){
+      if(collision.gameObject.tag=="Bricks"){
+        Destroy(collision.gameObject);
+    }
+        // Destroy(gameObject);
+
+    }
 }
