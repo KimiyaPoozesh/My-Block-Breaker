@@ -14,9 +14,18 @@ EportedObj/
 *.suo
 *.tmp
 *.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+
+# Unity3D generated meta files
+*.pidb.meta
 
 # Unity3D generated File On Creash Reports
 sysinfo.txt
+
 # Builds
 *.apk
 *.unitypackage
