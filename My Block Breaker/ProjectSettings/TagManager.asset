@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Bricks
   - Ball
+  - Boat
+  - Wall
   layers:
   - Default
   - TransparentFX
