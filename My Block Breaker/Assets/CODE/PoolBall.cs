@@ -10,7 +10,8 @@ public class PoolBall : MonoBehaviour
     public float forwardForce = 20000f;
     public GameObject ball;
     public GameObject paddlle;
-
+    
+    public Vector3 sizeChange;
     public ParticleSystem explosion;
     public AudioSource sound;
 
@@ -63,18 +64,27 @@ public class PoolBall : MonoBehaviour
         }
     
     if(collision.gameObject.tag=="SUPER"){
-        transform.localScale = new Vector3(2,2,3);
+        if(ball.transform.localScale.x + 2f<8)
+        {transform.localScale = ball.transform.localScale + sizeChange;}
+    }
+     if(collision.gameObject.tag=="knife"){
+        if(ball.transform.localScale.x + 2f>3)
+        {transform.localScale = ball.transform.localScale - sizeChange;}
     }
 
     if(collision.gameObject.tag=="SUPER2"){
-        int x = paddlle.transform.Scale.x;
-        int y = paddlle.transform.Scale.y;
-
-        int z = paddlle.transform.Scale.z;
-
-        paddlle.transform.localScale = new Vector3(x+2,y,z+2);
-        Destroy(collision.gameObject);
+     
+        if(paddlle.transform.localScale.x + 2f<16)
+        {paddlle.transform.localScale = paddlle.transform.localScale + sizeChange;   
+        Destroy(collision.gameObject);}
 
     }
+
+    if(collision.gameObject.tag=="Golden"){
+        GameObject[] Goldens = GameObject.FindGameObjectsWithTag("Golden");   
+        foreach (GameObject Golden in Goldens) {
+	    Destroy(Golden);
+        }
     }
+}
 }

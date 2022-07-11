@@ -15,7 +15,7 @@ public class PoolPaddle : MonoBehaviour
     {  
   
         Vec = transform.localPosition;  
-        Vec.x += Input.GetAxis("Horizontal") * Time.deltaTime * 20;  
+        Vec.x += Input.GetAxis("Horizontal") * Time.deltaTime * 50;  
         transform.localPosition = Vec;  
     } 
 

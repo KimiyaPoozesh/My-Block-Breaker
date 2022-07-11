@@ -8,6 +8,10 @@ TagManager:
   - Ball
   - Boat
   - Wall
+  - SUPER
+  - SUPER2
+  - knife
+  - Golden
   layers:
   - Default
   - TransparentFX
