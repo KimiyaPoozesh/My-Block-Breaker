@@ -131,6 +131,8 @@ public class PoolBall : MonoBehaviour
             {
                 paddlle.transform.localScale = paddlle.transform.localScale + sizeChange;   
                 Destroy(collision.gameObject);
+                rb.AddForce(force.normalized *speed);
+
             }
 
         }
@@ -145,30 +147,24 @@ public class PoolBall : MonoBehaviour
         }
         if(collision.gameObject.tag=="Heart"){
             health++;
+            Destroy(collision.gameObject);
             if(health==0)
                 {
                     var HealthRenderer = heart3.GetComponent<Renderer>();
                     HealthRenderer.material.SetColor("_Color", Color.red);
-                Destroy(collision.gameObject);
                     }
                 else if (health==1){
                     var HealthRenderer = heart2.GetComponent<Renderer>();
                     HealthRenderer.material.SetColor("_Color", Color.red);
-                Destroy(collision.gameObject);
-
 
                 }
                 else if (health==2){
                     var HealthRenderer = heart1.GetComponent<Renderer>();
                     HealthRenderer.material.SetColor("_Color", Color.red);
-                Destroy(collision.gameObject);
-
                 }
                 else if(health>3){
                     var HealthRenderer = heart1.GetComponent<Renderer>();
                     HealthRenderer.material.SetColor("_Color", Color.blue);
-                    Destroy(collision.gameObject);
-
                 }
 
         }
