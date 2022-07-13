@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PoolBall : MonoBehaviour
 {
+    public UnityEvent onCollisonEvent;
    public float speed = 5000f; 
 
     public Rigidbody rb;
@@ -28,6 +30,7 @@ public class PoolBall : MonoBehaviour
         BallPos = transform.position;
     }
 
+ 
     private  IEnumerator SetRandomTrajectory(){
 
         
@@ -39,7 +42,8 @@ public class PoolBall : MonoBehaviour
 
     rb.AddForce(force.normalized *speed);
     }
-        public void OnCollisionEnter(Collision collision){
+        public void     OnCollisionEnter(Collision collision){
+            onCollisonEvent?.Invoke();
 
             Vector3 force = Vector3.zero;
             force.x = Random.Range(-1f,1f);
