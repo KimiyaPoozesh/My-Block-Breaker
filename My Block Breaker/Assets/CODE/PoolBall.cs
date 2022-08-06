@@ -7,11 +7,15 @@ public class PoolBall : MonoBehaviour
 {
     public UnityEvent onCollisonEvent;
    public float speed = 5000f; 
-
+   public AudioSource music2;
+private Shake shake;
     public Rigidbody rb;
     public float forwardForce = 20000f;
     public GameObject ball;
     public GameObject paddlle;
+    public GameObject cam1;
+    public GameObject cam2;
+
     public GameObject heart1;
     public GameObject heart2;
     public GameObject heart3;
@@ -23,10 +27,13 @@ public class PoolBall : MonoBehaviour
     public static int health=3;
     public void Start()
     {
+        cam2.SetActive(false);
+        cam1.SetActive(true);
         StartCoroutine(SetRandomTrajectory ());
         explosion.Stop();
         sound.Stop();
         count++;
+
         BallPos = transform.position;
     }
 
@@ -53,6 +60,7 @@ public class PoolBall : MonoBehaviour
 
 
         if(collision.gameObject.tag=="Bricks"){
+
             Destroy(collision.gameObject);}
 
             if(collision.gameObject.tag=="Wall"){
@@ -63,8 +71,19 @@ public class PoolBall : MonoBehaviour
                     HealthRenderer.material.SetColor("_Color", Color.white);
                     sound.Play();
                     explosion.Play();
-                    Destroy(ball);
+                    GameObject[] Balls = GameObject.FindGameObjectsWithTag("Ball");   
+                foreach (GameObject Ball in Balls) {
+                 Destroy(Ball);
+                }
+                   
                     Destroy(paddlle);
+                     cam1.GetComponent<AudioListener> ().enabled  =  false;
+                     cam2.GetComponent<AudioListener> ().enabled  = true;
+
+                    cam1.SetActive(false);
+                    cam2.SetActive(true);
+                    music2.Play();
+
                     }
                 else if (health==1){
                     var HealthRenderer = heart2.GetComponent<Renderer>();
@@ -83,60 +102,44 @@ public class PoolBall : MonoBehaviour
                 }
                 
         }
-        if(collision.gameObject.tag=="Boat" && count<2){
-            // health+=2;
-            // if(health==0)
-            //     {
-            //         var HealthRenderer = heart3.GetComponent<Renderer>();
-            //         HealthRenderer.material.SetColor("_Color", Color.red);
-            //         }
-            //     else if (health==1){
-            //         var HealthRenderer = heart2.GetComponent<Renderer>();
-            //         HealthRenderer.material.SetColor("_Color", Color.red);
+        if(collision.gameObject.tag=="Boat"){
+            rb.AddForce(force.normalized *speed);
 
-
-            //     }
-            //     else if (health==2){
-            //         var HealthRenderer = heart1.GetComponent<Renderer>();
-            //         HealthRenderer.material.SetColor("_Color", Color.red);
-                    
-            //     }
-            //     else if(health>3){
-            //         var HealthRenderer = heart1.GetComponent<Renderer>();
-            //         HealthRenderer.material.SetColor("_Color", Color.yellow);
-                    
-            //     }
-//--------------------------------------------------------------------------------------------------------
-            GameObject CloneOfGameOject = Instantiate(ball,new Vector3(ball.transform.position.x
+            if(count <2)
+            {GameObject CloneOfGameOject = Instantiate(ball,new Vector3(ball.transform.position.x
             ,ball.transform.position.y,
             ball.transform.position.z),
-            ball.transform.rotation);
-            rb.AddForce(force.normalized *speed);
+            ball.transform.rotation);}
             
             }
         
         if(collision.gameObject.tag=="SUPER"){
+            rb.AddForce(force.normalized *speed);
+
             if(ball.transform.localScale.x + 2f<8)
             {       transform.localScale = ball.transform.localScale + sizeChange;
-                    rb.AddForce(force.normalized *speed);
 
             }
         }
         if(collision.gameObject.tag=="knife"){
-            if(ball.transform.localScale.x - 2f>3)
-            {transform.localScale = ball.transform.localScale - sizeChange;
             rb.AddForce(force.normalized *speed);
-    }
+            if(ball.transform.localScale.x - 2f>3)
+            {
+                 GameObject[] Balls = GameObject.FindGameObjectsWithTag("Ball");   
+                foreach (GameObject Ball in Balls) {
+                    transform.localScale = ball.transform.localScale - sizeChange;
+                }
+            }
         }
 
         if(collision.gameObject.tag=="SUPER2"){
-        
+        rb.AddForce(force.normalized *speed);
+
             if(paddlle.transform.localScale.x + 2f<16)
             {
                 paddlle.transform.localScale = paddlle.transform.localScale + sizeChange;   
                 Destroy(collision.gameObject);
-                rb.AddForce(force.normalized *speed);
-
+                
             }
 
         }
@@ -150,6 +153,8 @@ public class PoolBall : MonoBehaviour
             rb.AddForce(force.normalized *(speed+1000));
         }
         if(collision.gameObject.tag=="Heart"){
+            rb.AddForce(force.normalized *(speed+1000));
+
             health++;
             Destroy(collision.gameObject);
             if(health==0)
